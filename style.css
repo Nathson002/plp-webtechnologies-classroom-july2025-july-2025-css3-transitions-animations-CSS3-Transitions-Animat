@@ -1,0 +1,76 @@
+/* ==============================
+   General Styles
+================================= */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  color: #2c3e50;
+}
+
+button {
+  margin: 10px 0;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* transition example */
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* ==============================
+   PART 1: CSS Transitions & Animations
+================================= */
+/* Hover button transition is above */
+
+.animated-box {
+  width: 80px;
+  height: 80px;
+  margin-top: 15px;
+  background: tomato;
+  border-radius: 8px;
+  animation: bounce 2s infinite; /* continuous animation */
+}
+
+/* Keyframe animation for bouncing */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+}
+
+/* ==============================
+   PART 3: JS + CSS Combined Animations
+================================= */
+.trigger-box {
+  width: 100px;
+  height: 100px;
+  margin-top: 15px;
+  background: green;
+  border-radius: 6px;
+}
+
+/* CSS animation triggered by JS */
+.animate {
+  animation: slideFade 1.5s forwards;
+}
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
